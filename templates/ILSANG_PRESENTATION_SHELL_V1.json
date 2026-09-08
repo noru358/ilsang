@@ -1,0 +1,180 @@
+{
+  "schema": "ILSANG_PRESENTATION_SHELL_V1",
+  "template_id": "ILSANG_PRESENTATION_SHELL_V1",
+  "profile_id": "ILSANG_DEFAULT_V1",
+  "canvas": {
+    "width": 1080,
+    "height": 1350,
+    "ratio": "4:5"
+  },
+  "profile_semantics": {
+    "kind": "project_default_not_editor_capability_boundary",
+    "automatic_production": true,
+    "allow_custom_override": true,
+    "override_class": "CUSTOM_OVERRIDE",
+    "override_is_scene_corruption": false,
+    "visual_style_authority": "PENDING"
+  },
+  "page_structure": {
+    "automatic_default": {
+      "cover": 1,
+      "body": 6
+    },
+    "editor_capabilities": {
+      "add": true,
+      "delete": true,
+      "duplicate": true,
+      "page_type_change": true
+    }
+  },
+  "body": {
+    "layout_mode": "FULL_ART_OVERLAY",
+    "artwork_frame": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1350,
+      "fit": "frame_crop",
+      "default_locked": true,
+      "allow_stretch": false
+    },
+    "semantic_placement": {
+      "speech": "freeform_overlay",
+      "inner_thought": "freeform_overlay",
+      "narration": "freeform_overlay",
+      "sfx": "freeform_overlay"
+    },
+    "safe_inset": {
+      "left": 48,
+      "top": 48,
+      "right": 48,
+      "bottom": 48,
+      "kind": "soft_hint"
+    },
+    "group_contract": {
+      "top_level_pattern": [
+        "{page}.background",
+        "{page}.artwork",
+        "{page}.lettering",
+        "{page}.overlay"
+      ]
+    },
+    "placement_policy": {
+      "strategy": "presentation_master_inherit_then_focal_aware_fallback",
+      "structural_band_required": false,
+      "lettering_move_is_custom_override": false
+    },
+    "artwork_source_policy": {
+      "mode": "accepted_board_cell",
+      "record_provenance": true,
+      "replacement_requires_explicit_override": true
+    }
+  },
+  "cover": {
+    "layout_mode": "FULL_ART_OVERLAY",
+    "hero_frame": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1350,
+      "fit": "frame_crop",
+      "default_locked": true,
+      "allow_stretch": false
+    },
+    "title_region": {
+      "x": 48,
+      "y": 36,
+      "width": 984,
+      "height": 330,
+      "kind": "soft_hint"
+    },
+    "artwork_source_policy": {
+      "mode": "distinct_cover_hero_default",
+      "record_provenance": true,
+      "automatic_body_reuse": false,
+      "body_reuse_requires_explicit_selection": true,
+      "replacement_requires_explicit_override": true,
+      "focal_aware_lettering": true
+    }
+  },
+  "editor_defaults": {
+    "background": {
+      "locked": true,
+      "visible": true
+    },
+    "artwork": {
+      "locked": true,
+      "visible": true,
+      "crop_editable": true,
+      "explicit_unlock_allows_frame_transform": true
+    },
+    "lettering": {
+      "locked": false,
+      "visible": true
+    },
+    "overlay": {
+      "locked": false,
+      "visible": true,
+      "default_empty": true
+    },
+    "manual_edit_policy": {
+      "preservation": "property_level",
+      "automatic_layout_preserves_manual": true,
+      "explicit_reset_scope_required": true,
+      "line_break_override_separate_from_literal_text": true,
+      "overflow_after_copy_change": "surface_attention_do_not_silent_shrink"
+    }
+  },
+  "z_bands": {
+    "background": [0, 0],
+    "artwork": [1, 9],
+    "lettering": [10, 99],
+    "overlay": [100, 199]
+  },
+  "lettering": {
+    "speech": {
+      "container": "organic_bubble",
+      "tail": {
+        "enabled": true,
+        "style": "soft_curved",
+        "manual_length_unrestricted": true
+      },
+      "horizontal_flip_editable": true
+    },
+    "inner_thought": {
+      "container": "thought_box_optional",
+      "tail": false
+    },
+    "narration": {
+      "container": "optional",
+      "tail": false
+    },
+    "sfx": {
+      "container": "none",
+      "rotation_allowed": true
+    },
+    "presentation_master_policy": {
+      "bubble_shape": "inherit_when_specified",
+      "tail_geometry": "inherit_when_specified",
+      "line_breaks": "inherit_when_specified",
+      "typography_character": "inherit_when_specified",
+      "position_scale_rotation": "inherit_when_specified",
+      "shell_values_are": "fallback_only"
+    }
+  },
+  "typography": {
+    "project_personality": "PENDING_VISUAL_REDESIGN",
+    "fallback_family": "Noto Sans KR",
+    "silent_substitution_allowed": false
+  },
+  "presentation_design": {
+    "mode": "PRESENTATION_MASTER_FIRST",
+    "approved_master_is_upstream_visual_target": true,
+    "editor_scene_is_downstream_reconstruction": true,
+    "editor_defaults_are_fallback_only": true,
+    "silent_design_simplification_for_tool_compatibility": false,
+    "literal_copy_authority": "PLAN_APPROVED_COPY",
+    "accepted_artwork_identity_preserved_in_final_reconstruction": true,
+    "parity_qc_required_after_reconstruction": true
+  }
+}
